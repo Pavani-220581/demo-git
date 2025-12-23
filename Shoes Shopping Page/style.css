@@ -1,0 +1,186 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+}
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: #1f2933;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family:cursive;
+    font: size 25px;;
+}
+
+.sidebar a {
+    display: block;
+    color: #cbd5e1;
+    padding: 12px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background: #3b82f6;
+    color: white;
+}
+.main {
+    margin-left: 240px;
+    padding: 40px;
+}
+
+/* HOME PAGE (PRODUCTS)*/
+.products {
+    display: grid;
+    gap: 30px;
+    margin-top: 25px;
+    display:flex;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 35px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+/*CART PAGE*/
+.cart-container {
+    max-width: 1100px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    float:right;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.cart-header {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr 0.5fr;
+    background: #a8b8a4;
+    color: white;
+    padding: 18px;
+    font-weight: bold;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:hover {
+    background: #f9fafb;
+}
+
+/* Product column */
+.product {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.product img {
+    width: 65px;
+}
+
+.details h4 {
+    font-size: 15px;
+}
+
+.details p {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Price & total */
+.price,
+.total {
+    font-weight: 600;
+}
+
+/* Quantity input */
+.qty {
+    width: 55px;
+    padding: 6px;
+    text-align: center;
+}
+
+/* Remove button */
+.remove {
+    cursor: pointer;
+    font-size: 20px;
+    color: #999;
+    transition: color 0.3s;
+}
+
+.remove:hover {
+    color: red;
+}
+
+/* =======================
+   WALLET PAGE
+======================= */
+.wallet-box {
+    background: white;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.wallet-box h3 {
+    margin-bottom: 15px;
+}
+
+.wallet-box p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #16a34a;
+}
+
