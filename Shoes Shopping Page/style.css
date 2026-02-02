@@ -5,7 +5,6 @@
     padding: 0;
     font-family: Arial, sans-serif;
 }
-
 body {
     background: #f4f7fb;
 }
@@ -18,7 +17,11 @@ body {
     left: 0;
     padding: 20px;
 }
-
+.main h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #111827;
+}
 .sidebar h2 {
     color: white;
     text-align: center;
@@ -48,10 +51,9 @@ body {
 
 /* HOME PAGE (PRODUCTS)*/
 .products {
-    display: grid;
-    gap: 30px;
-    margin-top: 25px;
-    display:flex;
+    display:ruby;
+    gap: 30px; 
+    padding: 20px; 
 }
 
 .card {
@@ -62,6 +64,7 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     transition: transform 0.3s, box-shadow 0.3s;
     width: 300px;
+    gap:30px
 }
 
 .card:hover {
@@ -89,11 +92,12 @@ body {
 
 /*CART PAGE*/
 .cart-container {
-    max-width: 1100px;
-    background: white;
+    max-width: 1200px;
+    background: rgb(248, 244, 244);
     border-radius: 10px;
-    overflow: hidden;
-    float:right;
+    overflow:hidden;
+    float:left;
+    padding-left: 220px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
@@ -183,4 +187,110 @@ body {
     font-weight: bold;
     color: #16a34a;
 }
+/* for menu*/
+.main ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.main ul li {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.main ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    color: #e61313;
+}
+.brand-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+.brand-list li {
+    background: white;
+    border-radius: 102px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.brand-list img {
+    width: 150px;
+    height: 100px;
+    object-fit:cover;
+    margin-bottom: 10px;
+    display:grid;
+}
+.brand-list li:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+}
+.brand-list p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+}
+.logo {
+    height: 25px;
+    width: 25px;
+
+}
+
+/*js for wallet*/
+/* Wallet section styling */
+.main h1 {
+    margin-bottom: 20px;
+}
+
+.main p {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+/* Balance amount highlight */
+#balance {
+    font-weight: bold;
+    color: #a31616; /* green */
+}
+
+/* Buttons used by JavaScript */
+.main button {
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2815ce;
+    color: white;
+    font-size: 15px;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+.main button:hover {
+    background-color: #1e40af;
+}
+
+/* Message from JavaScript */
+#message {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
 
