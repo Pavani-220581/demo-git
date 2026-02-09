@@ -17,22 +17,23 @@
 
 <div class="main">
     <h1>Customer Registration</h1>
-    <form action="register.php" method="POST">
-      <label>Full Name *</label><br>
-        <input type="text" id="name"><br><br>
+
+    <form action="register.php" method="POST" enctype="multipart/form-data">
+
+        <label>Full Name *</label><br>
+        <input type="text" name="name" required><br><br>
 
         <label>Email *</label><br>
-        <input type="email" id="email"><br><br>
+        <input type="email" name="email" required><br><br>
 
         <label>Mobile Number *</label><br>
-        <input type="text" id="mobile"><br><br>
+        <input type="text" name="mobile" required><br><br>
 
         <label>Password *</label><br>
-        <input type="password" id="password"><br><br>
+        <input type="password" name="password" required><br><br>
 
-        <!-- Profile Details -->
         <label>Gender</label><br>
-        <select id="gender">
+        <select name="gender">
             <option value="">Select</option>
             <option>Male</option>
             <option>Female</option>
@@ -40,17 +41,19 @@
         </select><br><br>
 
         <label>Shipping Address *</label><br>
-        <textarea id="address"></textarea><br><br>
+        <textarea name="address" required></textarea><br><br>
 
-        <!-- Legal -->
-        <input type="checkbox" id="terms"> I agree to Terms & Conditions<br><br>
+        <!-- FILE UPLOAD -->
+        <label>Upload Document *</label><br>
+        <input type="file" name="upload_file" required><br><br>
 
-        <button onclick="register()">Register</button>
+        <input type="checkbox" name="terms" required> I agree to Terms & Conditions<br><br>
 
-        <p id="msg"></p>
+        <button type="submit">Register</button>
     </form>
 </div>
 
-<script src="first.js"></script>
 </body>
 </html>
+
+

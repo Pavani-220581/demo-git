@@ -291,6 +291,95 @@ body {
     font-weight: bold;
 }
 
+/* Main content area */
+.main {
+    margin-left: 220px;
+    padding: 30px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f8fafc;
+    min-height: 100vh;
+}
+
+/* Heading */
+.main h1 {
+    margin-bottom: 25px;
+    color: #1f2937;
+    font-size: 26px;
+}
+
+/* Form container */
+.main form {
+    background-color: #ffffff;
+    padding: 25px 30px;
+    width: 360px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Labels */
+.main label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+/* Inputs, textarea, select */
+.main input[type="text"],
+.main input[type="email"],
+.main input[type="password"],
+.main textarea,
+.main select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus effect */
+.main input:focus,
+.main textarea:focus,
+.main select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* Textarea */
+.main textarea {
+    resize: none;
+    height: 70px;
+}
+
+/* Checkbox */
+.main input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+/* Register button */
+.main button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Button hover */
+.main button:hover {
+    background-color: #1e40af;
+    transform: translateY(-1px);
+}
+
+
 
 
 

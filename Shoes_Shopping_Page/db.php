@@ -1,15 +1,12 @@
 <?php
-// Global variables (required by lab)
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "userdb";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "shoeshop";
 
-// Create connection
-$conn = mysqli_connect($host, $user, $pass, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $database);
 
-// Check connection
 if (!$conn) {
-    die("Database Connection Failed: " . mysqli_connect_error());
+    die("Database connection failed: " . mysqli_connect_error());
 }
 ?>
