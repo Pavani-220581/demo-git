@@ -1,0 +1,198 @@
+/* ===== RESET ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fb, #eef2ff);
+    color: #1f2937;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: linear-gradient(180deg, #1f2937, #111827);
+    padding: 20px 15px;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: cursive;
+    font-size: 24px;
+}
+
+.sidebar a {
+    display: block;
+    color: #cbd5e1;
+    padding: 12px 14px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    transition: 0.25s;
+}
+
+.sidebar a:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateX(4px);
+}
+
+/* ===== MAIN CENTER LAYOUT ===== */
+.main {
+    margin-left: 220px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+/* ===== TITLE ===== */
+.main h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 0.4px;
+}
+
+.main h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #2563eb;
+    margin: 8px auto 0;
+    border-radius: 3px;
+}
+
+/* ===== FORM CARD ===== */
+.main form {
+    background: white;
+    padding: 32px;
+    width: 400px;
+    border-radius: 16px;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+    border: 1px solid #e5e7eb;
+    transition: 0.3s;
+}
+
+.main form:hover {
+    box-shadow: 0 22px 55px rgba(0,0,0,0.18);
+}
+
+/* ===== LABELS ===== */
+.main label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #374151;
+}
+
+/* ===== INPUTS ===== */
+.main input[type="text"],
+.main input[type="email"],
+.main input[type="password"],
+.main textarea,
+.main select,
+.main input[type="file"] {
+    width: 100%;
+    padding: 11px;
+    margin-top: 6px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.25s;
+    background: #f9fafb;
+}
+
+/* ===== FOCUS EFFECT ===== */
+.main input:focus,
+.main textarea:focus,
+.main select:focus {
+    border-color: #2563eb;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+/* ===== TEXTAREA ===== */
+.main textarea {
+    resize: none;
+    height: 90px;
+}
+
+/* ===== FILE INPUT STYLE ===== */
+.main input[type="file"] {
+    background: #eef2ff;
+    border: 1px dashed #2563eb;
+    cursor: pointer;
+}
+
+/* ===== CHECKBOX ROW ===== */
+.main input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.1);
+}
+
+/* ===== REGISTER BUTTON ===== */
+.main button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 13px;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    letter-spacing: 0.4px;
+    transition: 0.3s;
+}
+
+.main button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37,99,235,0.35);
+}
+
+/* ===== LOGIN LINK ===== */
+.main p {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.main p a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.main p a:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .sidebar {
+        width: 170px;
+    }
+
+    .main {
+        margin-left: 170px;
+        padding: 15px;
+    }
+
+    .main form {
+        width: 100%;
+    }
+}

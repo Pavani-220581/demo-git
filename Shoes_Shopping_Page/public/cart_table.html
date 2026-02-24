@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+
+<!-- ===== SIDEBAR ===== -->
+<div class="sidebar">
+    <h2>ShoeShop</h2>
+    <a href="home.html">Home</a>
+    <a href="account.php">Account</a>
+    <a href="cart_table.html">Cart</a>
+    <a href="menu.html">Menu</a>
+    <a href="wallet.html">Wallet</a>
+</div>
+
+<!-- ===== MAIN ===== -->
+<div class="main">
+    <h1>Your Shopping Cart</h1>
+
+    <div class="cart-container" id="cartBox">
+
+        <!-- Header -->
+        <div class="cart-header">
+            <span>Product</span>
+            <span>Price</span>
+            <span>Qty</span>
+            <span>Total</span>
+            <span></span>
+        </div>
+
+        <!-- ===== ITEM 1 ===== -->
+        <div class="cart-item">
+            <div class="product">
+                <input type="checkbox" checked>
+                <img src="images/Nike.jpg" alt="shoe">
+                <div class="details">
+                    <h4>Nike Air Runner</h4>
+                    <p>Lightweight running shoe</p>
+                </div>
+            </div>
+
+            <div class="price">₹2499</div>
+
+            <input type="number" value="2" min="1" class="qty">
+
+            <div class="total">₹4998</div>
+
+            <button class="remove">✕</button>
+        </div>
+
+        <!-- ===== ITEM 2 ===== -->
+        <div class="cart-item">
+            <div class="product">
+                <input type="checkbox">
+                <img src="images/Puma.jpeg" alt="shoe">
+                <div class="details">
+                    <h4>Puma Sport Pro</h4>
+                    <p>Training & gym wear</p>
+                </div>
+            </div>
+
+            <div class="price">₹1999</div>
+
+            <input type="number" value="1" min="1" class="qty">
+
+            <div class="total">₹1999</div>
+
+            <button class="remove">✕</button>
+        </div>
+
+        <!-- ===== ITEM 3 ===== -->
+        <div class="cart-item">
+            <div class="product">
+                <input type="checkbox">
+                <img src="images/Adidas.jpg" alt="shoe">
+                <div class="details">
+                    <h4>Adidas Run X</h4>
+                    <p>Comfort everyday sneaker</p>
+                </div>
+            </div>
+
+            <div class="price">₹2999</div>
+
+            <input type="number" value="1" min="1" class="qty">
+
+            <div class="total">₹2999</div>
+
+            <button class="remove">✕</button>
+        </div>
+
+    </div>
+
+    <div class="cart-summary">
+        <h3 id="grandTotal">Grand Total: ₹0</h3>
+        <button class="checkout">Proceed to Checkout</button>
+    </div>
+
+</div>
+
+<script>
+    const cartBox = document.getElementById("cartBox");
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+    function renderCart() {
+        cartBox.innerHTML = `
+            <div class="cart-header">
+                <span>Product</span>
+                <span>Price</span>
+                <span>Qty</span>
+                <span>Total</span>
+                <span></span>
+            </div>
+        `;
+    
+        let grand = 0;
+    
+        cart.forEach((item, index) => {
+            const total = item.price * item.qty;
+            grand += total;
+    
+            cartBox.innerHTML += `
+            <div class="cart-item">
+                <div class="product">
+                    <img src="${item.img}">
+                    <div class="details">
+                        <h4>${item.name}</h4>
+                    </div>
+                </div>
+    
+                <div class="price">₹${item.price}</div>
+    
+                <input type="number" min="1" value="${item.qty}"
+                    onchange="changeQty(${index}, this.value)"
+                    class="qty">
+    
+                <div class="total">₹${total}</div>
+    
+                <button class="remove" onclick="removeItem(${index})">✕</button>
+            </div>`;
+        });
+    
+        document.getElementById("grandTotal").innerText =
+            "Grand Total: ₹" + grand;
+    
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
+    
+    function changeQty(i, q) {
+        cart[i].qty = Number(q);
+        renderCart();
+    }
+    
+    function removeItem(i) {
+        cart.splice(i, 1);
+        renderCart();
+    }
+    
+    renderCart();
+</script>    
+</body>
+</html>
+

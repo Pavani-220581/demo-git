@@ -1,0 +1,17 @@
+{
+    "name": "user/shoes_shopping_page",
+    "autoload": {
+        "psr-4": {
+            "User\\ShoesShoppingPage\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pavani",
+            "email": "n220581@rguktn.ac.in"
+        }
+    ],
+    "require": {
+        "mongodb/mongodb": "^2.2"
+    }
+}
